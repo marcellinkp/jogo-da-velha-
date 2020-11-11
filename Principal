@@ -1,0 +1,30 @@
+pacote  varaujo.com.br.jogovelha ;
+
+import  android.content.Intent ;
+import  android.support.v7.app.AppCompatActivity ;
+import  android.os.Bundle ;
+import  android.view.View ;
+import  varaujo.com.br.p1_jogovelha.R ;
+
+public  class  Principal  extends  AppCompatActivity {
+
+    @Sobrepor
+    protected  void  onCreate ( Bundle  savedInstanceState ) {
+        super . onCreate (savedInstanceState);
+        setContentView ( R . disposição . activity_principal);
+    }
+
+    public  void  newGame ( Exibir  visualização ) {
+        Intenção callDisplay =  new  Intent ( este , Jocks . Classe);
+        startActivity (callDisplay);
+    }
+
+    public  void  encerra ( Exibir  visualização ) {
+        Intent encerra =  novo  Intent ( Intent . ACTION_MAIN );
+        encerra . addCategory ( Intent . CATEGORY_HOME );
+        encerra . setFlags ( Intento . FLAG_ACTIVITY_NEW_TASK );
+        startActivity (encerra);
+    }
+
+
+}
