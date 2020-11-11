@@ -1,0 +1,34 @@
+pacote  varaujo.com.br.jogovelha ;
+
+import  android.content.Intent ;
+import  android.support.v7.app.AppCompatActivity ;
+import  android.os.Bundle ;
+import  android.view.View ;
+import  android.widget.EditText ;
+import  android.widget.Toast ;
+import  varaujo.com.br.p1_jogovelha.R ;
+
+public  class  Jogadores  extends  AppCompatActivity {
+
+    @Sobrepor
+    protected  void  onCreate ( Bundle  savedInstanceState ) {
+        super . onCreate (savedInstanceState);
+        setContentView ( R . disposição . activity_jogadores);
+    }
+
+    pública  vazio  startMatch ( Exibir  visualização ) {
+        EditText txtPlayer1 = ( EditText ) findViewById ( R . ID . TxtJogador1);
+        EditText txtPlayer2 = ( EditText ) findViewById ( R . ID . TxtJogador2);
+        String player1 = txtPlayer1 . getText () . toString () . toUpperCase () . aparar ();
+        String player2 = txtPlayer2 . getText () . toString () . toUpperCase () . aparar ();
+
+        se (player1 . isEmpty () || player2 . isEmpty ()) {
+            Toast . makeText (getApplicationContext (), " Favor preencher os campos " , Toast . LENGTH_SHORT ) . mostrar ();
+        } else {
+            Intent callGame =  novo  Intent ( este , classe Jogo . );
+            callGame . putExtra ( " jogador1 " , jogador1);
+            callGame . putExtra ( " jogador2 " , jogador2);
+            startActivity (callGame);
+        }
+    }
+}
