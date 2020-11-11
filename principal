@@ -1,0 +1,26 @@
+pacote  varaujo.com.br.jogovelha ;
+
+import  android.content.Intent ;
+import  android.support.v7.app.AppCompatActivity ;
+import  android.os.Bundle ;
+import  android.view.View ;
+import  android.widget.TextView ;
+import  varaujo.com.br.p1_jogovelha.R ;
+
+public  class  Vencedores  estende  AppCompatActivity {
+
+    @Sobrepor
+    protected  void  onCreate ( Bundle  savedInstanceState ) {
+        super . onCreate (savedInstanceState);
+        setContentView ( R . disposição . activity_vencedores);
+
+        TextView vencedor = ( TextView ) findViewById ( R . ID . TxtNomeVencerdor);
+        vencedor . setText (getIntent () . getStringExtra ( " vencedor " ));
+    }
+
+    public  void  newGame ( Exibir  visualização ) {
+        Intent callNewGame =  new  Intent ( classe deste , Jogadores . );
+        startActivity (callNewGame);
+    }
+
+}
